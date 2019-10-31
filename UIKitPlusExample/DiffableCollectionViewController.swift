@@ -4,7 +4,10 @@ import UIKitPlus
 class DiffableCollectionViewController: NavigationViewController {
     override var statusBarStyle: StatusBarStyle { .dark }
     
-    lazy var flowLayout = CollectionViewFlowLayout().estimatedItemSize(88, 88).scrollDirection(.vertical)
+    lazy var flowLayout = CollectionViewFlowLayout()
+        .estimatedItemSize(88)
+        .scrollDirection(.vertical)
+        .sectionInset(16)
     
     @State var users: [User] = []
     

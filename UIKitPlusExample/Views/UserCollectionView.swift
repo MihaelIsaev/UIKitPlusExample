@@ -16,10 +16,10 @@ class UserCollectionView: View {
     
     override func buildView() {
         super.buildView()
-        size(88, 64)
+        size(88, 90)
         body {
             Image(url: avatarURL)
-                .size(44)
+                .size(70)
                 .circle()
                 .topToSuperview()
                 .centerXInSuperview()
