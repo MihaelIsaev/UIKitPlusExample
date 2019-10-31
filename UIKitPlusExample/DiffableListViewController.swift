@@ -2,6 +2,8 @@ import UIKit
 import UIKitPlus
 
 class DiffableListViewController: NavigationViewController {
+    override var statusBarStyle: StatusBarStyle { .dark }
+    
     @State var users: [User] = []
     
     override func buildUI() {

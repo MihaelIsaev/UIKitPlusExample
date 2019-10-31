@@ -19,7 +19,7 @@ class UserListView: View {
         body {
             HStack {
                 Image(url: avatarURL).size(44).circle()
-                Text(name)
+                Text(name).color(.black)
             }.distribution(.fill).spacing(10).edgesToSuperview(top: 0, leading: 16, trailing: -16, bottom: 0)
         }
     }

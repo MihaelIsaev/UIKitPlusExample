@@ -24,6 +24,7 @@ class UserCollectionView: View {
                 .topToSuperview()
                 .centerXInSuperview()
             Text(name)
+                .color(.black)
                 .font(.helveticaNeueRegular, 12)
                 .alignment(.center)
                 .edgesToSuperview(leading: 0, trailing: 0, bottom: 0)

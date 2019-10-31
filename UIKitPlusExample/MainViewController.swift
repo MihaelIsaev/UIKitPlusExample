@@ -54,7 +54,7 @@ class MainViewController: ViewController {
             .hidden($githubOpened)
             .spacing(10)
             .edgesToSuperview(leading: 16, trailing: -16)
-            .bottomToSuperview(0, safeArea: true)
+            .bottomToSuperview(-16, safeArea: true)
             Text("🎉 Thank you very much!!! ❤️").alignment(.center)
                 .hidden($githubOpened.map { !$0 })
                 .edgesToSuperview(leading: 0, trailing: 0)

@@ -19,7 +19,7 @@ class NavigationBarView: View {
             backButton
             titleLabel
         }
-        height(64 !! .iPhoneX(100) !! .iPhoneXMax(100)) /// different value for different devices
+        height(80 !! .iPhoneX(100) !! .iPhoneXMax(100)) /// different value for different devices
         background(.white)
         corners(32, .bottomLeft, .bottomRight)
         shadow(0xA0ABCE, opacity: 1, x: 0, y: -4, radius: 10)
