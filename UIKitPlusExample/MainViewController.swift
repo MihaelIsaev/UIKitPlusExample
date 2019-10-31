@@ -4,6 +4,10 @@ import UIKitPlus
 /// if you pinned canvas in `Live.swift`
 /// then try to change anything here to see live preview
 class MainViewController: ViewController {
+    /// iOS9+ representation for `preferredStatusBarStyle`
+    /// which works for every view controller if you use `RootController`
+    override var statusBarStyle: StatusBarStyle { .light } /// doesn't work in live preview
+    
     @State var githubOpened = false
     
     lazy var titleText = Text()
