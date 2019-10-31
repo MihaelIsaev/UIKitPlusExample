@@ -1,6 +1,12 @@
 # UIKitPlus Example 🧁
 An example project for [UIKitPlus](https://github.com/MihaelIsaev/UIKitPlus) library 👏
 
+### Requirements
+
+This example is written for Xcode 11 (and macOS Catalina if you want live preview)
+
+The lib itself works with iOS9+ (yeah-yeah cause it is pure UIKit! it is not SwiftUI!)
+
 ### How to use
 
 Just download it, open `UIKitPlusExample.xcodeproj` and that's it
