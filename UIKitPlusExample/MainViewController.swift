@@ -11,6 +11,7 @@ class MainViewController: ViewController {
     @State var githubOpened = false
     
     lazy var titleText = Text()
+    lazy var imageView = Image(.wwdcLogo)
     
     override func buildUI() {
         super.buildUI()
@@ -22,13 +23,24 @@ class MainViewController: ViewController {
                 .color(.white)
                 .topToSuperview(50, safeArea: true)
                 .centerXInSuperview()
-            Image(.wwdcLogo)
+            imageView
                 .mode(.scaleAspectFill)
                 .size(200)
                 .circle()
                 .border(2, .white)
                 .top(to: titleText, 44)
                 .centerXInSuperview()
+            VStack {
+                Button.gray.title("Diffable List").onTapGesture {
+                    self.pushViewController(DiffableListViewController())
+                }
+                Button.gray.title("Diffable Collection").onTapGesture {
+                    self.pushViewController(DiffableCollectionViewController())
+                }
+            }
+            .spacing(10)
+            .top(to: imageView, 44)
+            .edgesToSuperview(leading: 16, trailing: -16)
             VStack {
                 Text("If you like this lib please give it a ⭐️")
                     .multiline() // the same as `lines = 0`
@@ -48,5 +60,9 @@ class MainViewController: ViewController {
                 .edgesToSuperview(leading: 0, trailing: 0)
                 .bottomToSuperview(-30, safeArea: true)
         }
+    }
+    
+    func pushViewController(_ vc: UIViewController) {
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

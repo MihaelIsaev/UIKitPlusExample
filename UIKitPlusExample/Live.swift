@@ -6,7 +6,7 @@ import UIKitPlus
 @available(iOS 13.0, *)
 struct DemoView_Preview: PreviewProvider {
     static var previews: some SwiftUI.View {
-        MainViewController() /// replace this line with your view controller or view
+        DiffableCollectionViewController() /// replace this line with your view controller or view
             .liveView
             .previewDevice(PreviewDevice(rawValue: "iPhone X"))
             .edgesIgnoringSafeArea(.vertical)

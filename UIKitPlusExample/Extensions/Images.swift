@@ -5,6 +5,7 @@ import UIKitPlus
 
 /// this way to declare `UIImage` and use it like `Image(.myCustomImage)`
 extension UIImage {
+    static var iconBack: UIImage? { UIImage(named: "iconBack") }
     static var wwdcLogo: UIImage? { UIImage(named: "wwdc-logo") }
 //    static var ___: UIImage? { UIImage(named: "___") }
 }
