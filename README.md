@@ -20,3 +20,7 @@ To see Live Preview just go to `Live.swift` and pin the canvas
 ### More examples
 
 Please request for examples in issues I'll try to cover as much as I can 🚀
+
+#### Watch this repo to be notified about new examples
+
+<img width="366" alt="Screenshot 2019-10-31 at 13 54 37" src="https://user-images.githubusercontent.com/1272610/67936872-ff405700-fbe5-11e9-9f68-ea3cbc8c6f60.png">
