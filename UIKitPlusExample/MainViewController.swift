@@ -1,17 +1,19 @@
 import UIKit
 import UIKitPlus
 
-/// if you pinned canvas in `Live.swift` then try to change anything here to see live preview
+/// if you pinned canvas in `Live.swift`
+/// then try to change anything here to see live preview
 class MainViewController: ViewController {
     @State var githubOpened = false
     
-    lazy var titleText = Text("UIKitPlus is a 🧁")
+    lazy var titleText = Text()
     
     override func buildUI() {
         super.buildUI()
         view.backgroundColor = .darkGray
         body {
             titleText
+                .text("UIKitPlus is a 🧁")
                 .font(.helveticaNeueBold, 30)
                 .color(.white)
                 .topToSuperview(50, safeArea: true)

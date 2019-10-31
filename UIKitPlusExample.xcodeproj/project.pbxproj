@@ -73,7 +73,6 @@
 				2560A1F6236A9C8600A0A59F /* SceneDelegate.swift */,
 				2560A20E236AA1F700A0A59F /* RootViewController.swift */,
 				2560A1F8236A9C8600A0A59F /* MainViewController.swift */,
-				2560A21C236AB11E00A0A59F /* Enums */,
 				2560A215236AACF700A0A59F /* Extensions */,
 				2560A21D236AB12400A0A59F /* Models */,
 				2560A1FD236A9C8900A0A59F /* Assets.xcassets */,
@@ -92,13 +91,6 @@
 				2560A220236AB21A00A0A59F /* Buttons.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2560A21C236AB11E00A0A59F /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enums;
 			sourceTree = "<group>";
 		};
 		2560A21D236AB12400A0A59F /* Models */ = {

@@ -1,4 +1,5 @@
-/// press `Cmd + Opt + Enter` to show `Canvas` and `pin` this canvas to always see it
+/// press `Cmd + Opt + Enter` to show `Canvas`
+/// and `pin` this canvas to always see it
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 import UIKitPlus
