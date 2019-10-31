@@ -21,11 +21,11 @@ class MainViewController: ViewController {
                 .text("UIKitPlus is a 🧁")
                 .font(.helveticaNeueBold, 30)
                 .color(.white)
-                .topToSuperview(50, safeArea: true)
+                .topToSuperview(44, safeArea: true)
                 .centerXInSuperview()
             imageView
                 .mode(.scaleAspectFill)
-                .size(200)
+                .size(140)
                 .circle()
                 .border(2, .white)
                 .top(to: titleText, 44)
