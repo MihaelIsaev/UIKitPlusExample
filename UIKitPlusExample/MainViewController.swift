@@ -37,6 +37,9 @@ class MainViewController: ViewController {
                 Button.gray.title("Diffable Collection").onTapGesture {
                     self.pushViewController(DiffableCollectionViewController())
                 }
+                Button.gray.title("Simple Chat in 5 mins").onTapGesture {
+                    self.pushViewController(ChatViewController())
+                }
             }
             .spacing(10)
             .top(to: imageView, 44)

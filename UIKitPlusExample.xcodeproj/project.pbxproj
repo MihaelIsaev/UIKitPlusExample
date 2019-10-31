@@ -26,6 +26,10 @@
 		2560A22C236AC9E500A0A59F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A22B236AC9E500A0A59F /* User.swift */; };
 		2560A22E236ACA9800A0A59F /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A22D236ACA9800A0A59F /* UserListView.swift */; };
 		2560A230236AD9CD00A0A59F /* UserCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A22F236AD9CD00A0A59F /* UserCollectionView.swift */; };
+		2560A232236ADFC600A0A59F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A231236ADFC600A0A59F /* ChatViewController.swift */; };
+		2560A234236ADFE000A0A59F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A233236ADFE000A0A59F /* Message.swift */; };
+		2560A23C236AE0DF00A0A59F /* MessageMyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A23B236AE0DF00A0A59F /* MessageMyView.swift */; };
+		2560A23E236AE0EC00A0A59F /* MessageOpponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		2560A22B236AC9E500A0A59F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2560A22D236ACA9800A0A59F /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		2560A22F236AD9CD00A0A59F /* UserCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCollectionView.swift; sourceTree = "<group>"; };
+		2560A231236ADFC600A0A59F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		2560A233236ADFE000A0A59F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		2560A23B236AE0DF00A0A59F /* MessageMyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageMyView.swift; sourceTree = "<group>"; };
+		2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOpponentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,7 @@
 				2560A224236AC53A00A0A59F /* NavigationViewController.swift */,
 				2560A222236AC4E400A0A59F /* DiffableListViewController.swift */,
 				2560A229236AC96600A0A59F /* DiffableCollectionViewController.swift */,
+				2560A231236ADFC600A0A59F /* ChatViewController.swift */,
 				2560A226236AC5B000A0A59F /* Views */,
 				2560A215236AACF700A0A59F /* Extensions */,
 				2560A21D236AB12400A0A59F /* Models */,
@@ -115,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2560A22B236AC9E500A0A59F /* User.swift */,
+				2560A233236ADFE000A0A59F /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,6 +135,8 @@
 				2560A227236AC5B800A0A59F /* NavigationBarView.swift */,
 				2560A22D236ACA9800A0A59F /* UserListView.swift */,
 				2560A22F236AD9CD00A0A59F /* UserCollectionView.swift */,
+				2560A23B236AE0DF00A0A59F /* MessageMyView.swift */,
+				2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,16 +220,20 @@
 				2560A221236AB21A00A0A59F /* Buttons.swift in Sources */,
 				2560A22E236ACA9800A0A59F /* UserListView.swift in Sources */,
 				2560A225236AC53A00A0A59F /* NavigationViewController.swift in Sources */,
+				2560A234236ADFE000A0A59F /* Message.swift in Sources */,
 				2560A22A236AC96600A0A59F /* DiffableCollectionViewController.swift in Sources */,
 				2560A228236AC5B800A0A59F /* NavigationBarView.swift in Sources */,
 				2560A223236AC4E400A0A59F /* DiffableListViewController.swift in Sources */,
 				2560A1F9236A9C8600A0A59F /* MainViewController.swift in Sources */,
 				2560A22C236AC9E500A0A59F /* User.swift in Sources */,
 				2560A1F5236A9C8600A0A59F /* AppDelegate.swift in Sources */,
+				2560A23E236AE0EC00A0A59F /* MessageOpponentView.swift in Sources */,
 				2560A230236AD9CD00A0A59F /* UserCollectionView.swift in Sources */,
 				2560A20F236AA1F700A0A59F /* RootViewController.swift in Sources */,
+				2560A232236ADFC600A0A59F /* ChatViewController.swift in Sources */,
 				2560A219236AAD9D00A0A59F /* Colors.swift in Sources */,
 				2560A214236AAC4300A0A59F /* Live.swift in Sources */,
+				2560A23C236AE0DF00A0A59F /* MessageMyView.swift in Sources */,
 				2560A21B236AAF7C00A0A59F /* Images.swift in Sources */,
 				2560A217236AAD3200A0A59F /* Fonts.swift in Sources */,
 				2560A1F7236A9C8600A0A59F /* SceneDelegate.swift in Sources */,
