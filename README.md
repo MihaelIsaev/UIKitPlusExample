@@ -33,3 +33,5 @@ Please request for examples in issues I'll try to cover as much as I can 🚀
 ⚠️ don't use Xcode 11.2 because of compiler bug in it which is showing `Type of expression is ambiguous without more context` in function builders if expression is long. Use Xcode 11.1 cause there everything compiles fine. Hope this issue will be fixed in nearest Xcode update.
 
 Xcode 11.1 available here [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/)
+
+If you experience any compilation problems in Xcode 11.1 please go to `Xcode -> Preferences -> Location` open derived data folder in finder and remove everything from it manually. Then restart Xcode and compile your project without any errors.
