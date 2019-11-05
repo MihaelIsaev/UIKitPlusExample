@@ -15,7 +15,7 @@ class MainViewController: ViewController {
     
     override func buildUI() {
         super.buildUI()
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .darkGray / .black
         body {
             titleText
                 .text("UIKitPlus is a 🧁")
