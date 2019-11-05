@@ -52,6 +52,8 @@
 		25B820C7237168E800A60A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FF236A9C8900A0A59F /* LaunchScreen.storyboard */; };
 		25B820C8237168E800A60A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FD236A9C8900A0A59F /* Assets.xcassets */; };
 		25B820CE2371690E00A60A5C /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A213236AAC4300A0A59F /* Live.swift */; };
+		25B820D023717CEB00A60A5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B820CF23717CEB00A60A5C /* MapViewController.swift */; };
+		25B820D123717CEB00A60A5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B820CF23717CEB00A60A5C /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,7 +82,7 @@
 		2560A23B236AE0DF00A0A59F /* MessageMyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageMyView.swift; sourceTree = "<group>"; };
 		2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOpponentView.swift; sourceTree = "<group>"; };
 		25B820CC237168E800A60A5C /* UIKitPlusExampleiOS9+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitPlusExampleiOS9+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		25B820CD237168E800A60A5C /* UIKitPlusExample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UIKitPlusExample copy-Info.plist"; path = "/Users/mik/Development/UIKitPlusExample/UIKitPlusExample copy-Info.plist"; sourceTree = "<absolute>"; };
+		25B820CF23717CEB00A60A5C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +110,6 @@
 			children = (
 				2560A1F3236A9C8600A0A59F /* UIKitPlusExample */,
 				2560A1F2236A9C8600A0A59F /* Products */,
-				25B820CD237168E800A60A5C /* UIKitPlusExample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +134,7 @@
 				2560A222236AC4E400A0A59F /* DiffableListViewController.swift */,
 				2560A229236AC96600A0A59F /* DiffableCollectionViewController.swift */,
 				2560A231236ADFC600A0A59F /* ChatViewController.swift */,
+				25B820CF23717CEB00A60A5C /* MapViewController.swift */,
 				2560A226236AC5B000A0A59F /* Views */,
 				2560A215236AACF700A0A59F /* Extensions */,
 				2560A21D236AB12400A0A59F /* Models */,
@@ -294,6 +296,7 @@
 				2560A23E236AE0EC00A0A59F /* MessageOpponentView.swift in Sources */,
 				2560A230236AD9CD00A0A59F /* UserCollectionView.swift in Sources */,
 				2560A20F236AA1F700A0A59F /* RootViewController.swift in Sources */,
+				25B820D023717CEB00A60A5C /* MapViewController.swift in Sources */,
 				25B820CE2371690E00A60A5C /* Live.swift in Sources */,
 				2560A232236ADFC600A0A59F /* ChatViewController.swift in Sources */,
 				2560A219236AAD9D00A0A59F /* Colors.swift in Sources */,
@@ -311,6 +314,7 @@
 				25B820B1237168E800A60A5C /* Buttons.swift in Sources */,
 				25B820B2237168E800A60A5C /* UserListView.swift in Sources */,
 				25B820B3237168E800A60A5C /* NavigationViewController.swift in Sources */,
+				25B820D123717CEB00A60A5C /* MapViewController.swift in Sources */,
 				25B820B4237168E800A60A5C /* Message.swift in Sources */,
 				25B820B5237168E800A60A5C /* DiffableCollectionViewController.swift in Sources */,
 				25B820B6237168E800A60A5C /* NavigationBarView.swift in Sources */,
@@ -500,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94H38KUMB5;
-				INFOPLIST_FILE = "UIKitPlusExample copy-Info.plist";
+				INFOPLIST_FILE = UIKitPlusExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -519,7 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 94H38KUMB5;
-				INFOPLIST_FILE = "UIKitPlusExample copy-Info.plist";
+				INFOPLIST_FILE = UIKitPlusExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

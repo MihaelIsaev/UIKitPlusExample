@@ -30,20 +30,27 @@ class MainViewController: ViewController {
                 .border(2, .white)
                 .top(to: titleText, 44)
                 .centerXInSuperview()
-            VStack {
+            StaticList {
                 Button.gray.title("Diffable List").onTapGesture {
                     self.pushViewController(DiffableListViewController())
                 }
+                View().height(10)
                 Button.gray.title("Diffable Collection").onTapGesture {
                     self.pushViewController(DiffableCollectionViewController())
                 }
+                View().height(10)
                 Button.gray.title("Simple Chat in 5 mins").onTapGesture {
                     self.pushViewController(ChatViewController())
                 }
+                View().height(10)
+                Button.gray.title("Map View").onTapGesture {
+                    self.pushViewController(MapViewController())
+                }
             }
-            .spacing(10)
+            .background(.clear)
             .top(to: imageView, 44)
             .edgesToSuperview(leading: 16, trailing: -16)
+            .bottomToSuperview(-110, safeArea: true)
             VStack {
                 Text("If you like this lib please give it a ⭐️")
                     .multiline() // the same as `lines = 0`
