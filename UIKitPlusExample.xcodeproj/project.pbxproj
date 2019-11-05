@@ -14,7 +14,6 @@
 		2560A201236A9C8900A0A59F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FF236A9C8900A0A59F /* LaunchScreen.storyboard */; };
 		2560A20F236AA1F700A0A59F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A20E236AA1F700A0A59F /* RootViewController.swift */; };
 		2560A212236AA23A00A0A59F /* UIKitPlus in Frameworks */ = {isa = PBXBuildFile; productRef = 2560A211236AA23A00A0A59F /* UIKitPlus */; };
-		2560A214236AAC4300A0A59F /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A213236AAC4300A0A59F /* Live.swift */; };
 		2560A217236AAD3200A0A59F /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A216236AAD3200A0A59F /* Fonts.swift */; };
 		2560A219236AAD9D00A0A59F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A218236AAD9D00A0A59F /* Colors.swift */; };
 		2560A21B236AAF7C00A0A59F /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A21A236AAF7C00A0A59F /* Images.swift */; };
@@ -30,6 +29,29 @@
 		2560A234236ADFE000A0A59F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A233236ADFE000A0A59F /* Message.swift */; };
 		2560A23C236AE0DF00A0A59F /* MessageMyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A23B236AE0DF00A0A59F /* MessageMyView.swift */; };
 		2560A23E236AE0EC00A0A59F /* MessageOpponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */; };
+		25B820B1237168E800A60A5C /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A220236AB21A00A0A59F /* Buttons.swift */; };
+		25B820B2237168E800A60A5C /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A22D236ACA9800A0A59F /* UserListView.swift */; };
+		25B820B3237168E800A60A5C /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A224236AC53A00A0A59F /* NavigationViewController.swift */; };
+		25B820B4237168E800A60A5C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A233236ADFE000A0A59F /* Message.swift */; };
+		25B820B5237168E800A60A5C /* DiffableCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A229236AC96600A0A59F /* DiffableCollectionViewController.swift */; };
+		25B820B6237168E800A60A5C /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A227236AC5B800A0A59F /* NavigationBarView.swift */; };
+		25B820B7237168E800A60A5C /* DiffableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A222236AC4E400A0A59F /* DiffableListViewController.swift */; };
+		25B820B8237168E800A60A5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A1F8236A9C8600A0A59F /* MainViewController.swift */; };
+		25B820B9237168E800A60A5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A22B236AC9E500A0A59F /* User.swift */; };
+		25B820BA237168E800A60A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A1F4236A9C8600A0A59F /* AppDelegate.swift */; };
+		25B820BB237168E800A60A5C /* MessageOpponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */; };
+		25B820BC237168E800A60A5C /* UserCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A22F236AD9CD00A0A59F /* UserCollectionView.swift */; };
+		25B820BD237168E800A60A5C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A20E236AA1F700A0A59F /* RootViewController.swift */; };
+		25B820BE237168E800A60A5C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A231236ADFC600A0A59F /* ChatViewController.swift */; };
+		25B820BF237168E800A60A5C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A218236AAD9D00A0A59F /* Colors.swift */; };
+		25B820C0237168E800A60A5C /* MessageMyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A23B236AE0DF00A0A59F /* MessageMyView.swift */; };
+		25B820C1237168E800A60A5C /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A21A236AAF7C00A0A59F /* Images.swift */; };
+		25B820C2237168E800A60A5C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A216236AAD3200A0A59F /* Fonts.swift */; };
+		25B820C3237168E800A60A5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A1F6236A9C8600A0A59F /* SceneDelegate.swift */; };
+		25B820C5237168E800A60A5C /* UIKitPlus in Frameworks */ = {isa = PBXBuildFile; productRef = 25B820AE237168E800A60A5C /* UIKitPlus */; };
+		25B820C7237168E800A60A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FF236A9C8900A0A59F /* LaunchScreen.storyboard */; };
+		25B820C8237168E800A60A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FD236A9C8900A0A59F /* Assets.xcassets */; };
+		25B820CE2371690E00A60A5C /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A213236AAC4300A0A59F /* Live.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +79,8 @@
 		2560A233236ADFE000A0A59F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2560A23B236AE0DF00A0A59F /* MessageMyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageMyView.swift; sourceTree = "<group>"; };
 		2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOpponentView.swift; sourceTree = "<group>"; };
+		25B820CC237168E800A60A5C /* UIKitPlusExampleiOS9+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitPlusExampleiOS9+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B820CD237168E800A60A5C /* UIKitPlusExample copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "UIKitPlusExample copy-Info.plist"; path = "/Users/mik/Development/UIKitPlusExample/UIKitPlusExample copy-Info.plist"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +92,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		25B820C4237168E800A60A5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B820C5237168E800A60A5C /* UIKitPlus in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,6 +108,7 @@
 			children = (
 				2560A1F3236A9C8600A0A59F /* UIKitPlusExample */,
 				2560A1F2236A9C8600A0A59F /* Products */,
+				25B820CD237168E800A60A5C /* UIKitPlusExample copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2560A1F1236A9C8600A0A59F /* UIKitPlusExample.app */,
+				25B820CC237168E800A60A5C /* UIKitPlusExampleiOS9+.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +198,26 @@
 			productReference = 2560A1F1236A9C8600A0A59F /* UIKitPlusExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		25B820AD237168E800A60A5C /* UIKitPlusExampleiOS9+ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25B820C9237168E800A60A5C /* Build configuration list for PBXNativeTarget "UIKitPlusExampleiOS9+" */;
+			buildPhases = (
+				25B820B0237168E800A60A5C /* Sources */,
+				25B820C4237168E800A60A5C /* Frameworks */,
+				25B820C6237168E800A60A5C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIKitPlusExampleiOS9+";
+			packageProductDependencies = (
+				25B820AE237168E800A60A5C /* UIKitPlus */,
+			);
+			productName = UIKitPlusExample;
+			productReference = 25B820CC237168E800A60A5C /* UIKitPlusExampleiOS9+.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,6 +250,7 @@
 			projectRoot = "";
 			targets = (
 				2560A1F0236A9C8600A0A59F /* UIKitPlusExample */,
+				25B820AD237168E800A60A5C /* UIKitPlusExampleiOS9+ */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +262,15 @@
 			files = (
 				2560A201236A9C8900A0A59F /* LaunchScreen.storyboard in Resources */,
 				2560A1FE236A9C8900A0A59F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B820C6237168E800A60A5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B820C7237168E800A60A5C /* LaunchScreen.storyboard in Resources */,
+				25B820C8237168E800A60A5C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,13 +294,39 @@
 				2560A23E236AE0EC00A0A59F /* MessageOpponentView.swift in Sources */,
 				2560A230236AD9CD00A0A59F /* UserCollectionView.swift in Sources */,
 				2560A20F236AA1F700A0A59F /* RootViewController.swift in Sources */,
+				25B820CE2371690E00A60A5C /* Live.swift in Sources */,
 				2560A232236ADFC600A0A59F /* ChatViewController.swift in Sources */,
 				2560A219236AAD9D00A0A59F /* Colors.swift in Sources */,
-				2560A214236AAC4300A0A59F /* Live.swift in Sources */,
 				2560A23C236AE0DF00A0A59F /* MessageMyView.swift in Sources */,
 				2560A21B236AAF7C00A0A59F /* Images.swift in Sources */,
 				2560A217236AAD3200A0A59F /* Fonts.swift in Sources */,
 				2560A1F7236A9C8600A0A59F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B820B0237168E800A60A5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B820B1237168E800A60A5C /* Buttons.swift in Sources */,
+				25B820B2237168E800A60A5C /* UserListView.swift in Sources */,
+				25B820B3237168E800A60A5C /* NavigationViewController.swift in Sources */,
+				25B820B4237168E800A60A5C /* Message.swift in Sources */,
+				25B820B5237168E800A60A5C /* DiffableCollectionViewController.swift in Sources */,
+				25B820B6237168E800A60A5C /* NavigationBarView.swift in Sources */,
+				25B820B7237168E800A60A5C /* DiffableListViewController.swift in Sources */,
+				25B820B8237168E800A60A5C /* MainViewController.swift in Sources */,
+				25B820B9237168E800A60A5C /* User.swift in Sources */,
+				25B820BA237168E800A60A5C /* AppDelegate.swift in Sources */,
+				25B820BB237168E800A60A5C /* MessageOpponentView.swift in Sources */,
+				25B820BC237168E800A60A5C /* UserCollectionView.swift in Sources */,
+				25B820BD237168E800A60A5C /* RootViewController.swift in Sources */,
+				25B820BE237168E800A60A5C /* ChatViewController.swift in Sources */,
+				25B820BF237168E800A60A5C /* Colors.swift in Sources */,
+				25B820C0237168E800A60A5C /* MessageMyView.swift in Sources */,
+				25B820C1237168E800A60A5C /* Images.swift in Sources */,
+				25B820C2237168E800A60A5C /* Fonts.swift in Sources */,
+				25B820C3237168E800A60A5C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIKitPlusExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +482,45 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIKitPlusExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		25B820CA237168E800A60A5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94H38KUMB5;
+				INFOPLIST_FILE = "UIKitPlusExample copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25B820CB237168E800A60A5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94H38KUMB5;
+				INFOPLIST_FILE = "UIKitPlusExample copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -423,10 +553,27 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		25B820C9237168E800A60A5C /* Build configuration list for PBXNativeTarget "UIKitPlusExampleiOS9+" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B820CA237168E800A60A5C /* Debug */,
+				25B820CB237168E800A60A5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
 		2560A210236AA23A00A0A59F /* XCRemoteSwiftPackageReference "UIKitPlus" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MihaelIsaev/UIKitPlus";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		25B820AF237168E800A60A5C /* XCRemoteSwiftPackageReference "UIKitPlus" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MihaelIsaev/UIKitPlus";
 			requirement = {
@@ -440,6 +587,11 @@
 		2560A211236AA23A00A0A59F /* UIKitPlus */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2560A210236AA23A00A0A59F /* XCRemoteSwiftPackageReference "UIKitPlus" */;
+			productName = UIKitPlus;
+		};
+		25B820AE237168E800A60A5C /* UIKitPlus */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25B820AF237168E800A60A5C /* XCRemoteSwiftPackageReference "UIKitPlus" */;
 			productName = UIKitPlus;
 		};
 /* End XCSwiftPackageProductDependency section */
