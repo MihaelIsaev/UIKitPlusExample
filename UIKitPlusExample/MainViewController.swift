@@ -51,7 +51,11 @@ class MainViewController: ViewController {
                     .font(.helveticaNeueRegular, 18)
                 Button.github.title("Go to github!").onTapGesture {
                     guard let url = URL(string: "https://github.com/MihaelIsaev/UIKitPlus") else { return }
-                    UIApplication.shared.open(url, options: [:]) { self.githubOpened = $0 }
+                    if #available(iOS 10.0, *) {
+                        UIApplication.shared.open(url, options: [:]) { self.githubOpened = $0 }
+                    } else {
+                        self.githubOpened = UIApplication.shared.openURL(url)
+                    }
                 }
             }
             .hidden($githubOpened)
