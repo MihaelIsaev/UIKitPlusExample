@@ -27,7 +27,7 @@ Please request for examples in issues I'll try to cover as much as I can 🚀
 
 <img width="366" alt="Screenshot 2019-10-31 at 13 54 37" src="https://user-images.githubusercontent.com/1272610/67936872-ff405700-fbe5-11e9-9f68-ea3cbc8c6f60.png">
 
-# KNOW ISSUE
+# KNOWN ISSUE
 
 ⚠️⚠️ This project doesn't compile in Xcode 11.2 because of compiler bug. Use Xcode 11.1 instead.
 ⚠️ don't use Xcode 11.2 because of compiler bug in it which is showing `Type of expression is ambiguous without more context` in function builders if expression is long. Use Xcode 11.1 cause there everything compiles fine. Hope this issue will be fixed in nearest Xcode update.
