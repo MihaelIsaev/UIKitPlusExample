@@ -29,8 +29,7 @@ Please request for examples in issues I'll try to cover as much as I can 🚀
 
 # KNOWN ISSUE
 
-⚠️⚠️ This project doesn't compile in Xcode 11.2 because of compiler bug. Use Xcode 11.1 instead.
-⚠️ don't use Xcode 11.2 because of compiler bug in it which is showing `Type of expression is ambiguous without more context` in function builders if expression is long. Use Xcode 11.1 cause there everything compiles fine. Hope this issue will be fixed in nearest Xcode update.
+⚠️ don't use Xcode 11.2 and 11.3 because of its compiler bug which is showing `Type of expression is ambiguous without more context` in function builders if expression is long while the same code compiles just fine with simple `swift build` command. Use Xcode 11.1 cause there everything compiles fine. Hope this issue will be fixed([please vote for this issue here](https://bugs.swift.org/browse/SR-11694)).
 
 Xcode 11.1 available here [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/)
 
