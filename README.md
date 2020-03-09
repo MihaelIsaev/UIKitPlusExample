@@ -1,6 +1,10 @@
 # UIKitPlus Example 🧁
 An example project for [UIKitPlus](https://github.com/MihaelIsaev/UIKitPlus) library 👏
 
+**It works well since Xcode 11.4 and Swift 5.2.**
+
+Otherwise [Xcode 11.1 and Swift 5.1.0](https://developer.apple.com/download/more/) only, don't try it with Swift 5.1.1, 5.1.2, 5.1.3, 5.1.4 because of its bugs.
+
 ### Requirements
 
 This example is written for Xcode 11 (and macOS Catalina if you want live preview)
@@ -26,11 +30,3 @@ Please request for examples in issues I'll try to cover as much as I can 🚀
 #### Watch this repo to be notified about new examples
 
 <img width="366" alt="Screenshot 2019-10-31 at 13 54 37" src="https://user-images.githubusercontent.com/1272610/67936872-ff405700-fbe5-11e9-9f68-ea3cbc8c6f60.png">
-
-# KNOWN ISSUE
-
-⚠️ don't use Xcode 11.2 and 11.3 because of its compiler bug which is showing `Type of expression is ambiguous without more context` in function builders if expression is long while the same code compiles just fine with simple `swift build` in console. Use Xcode 11.1 cause there everything compiles fine. Hope this issue will be fixed([please vote for this issue here](https://bugs.swift.org/browse/SR-11694)).
-
-Xcode 11.1 available here [https://developer.apple.com/download/more/](https://developer.apple.com/download/more/)
-
-If you experience any compilation problems in Xcode 11.1 please go to `Xcode -> Preferences -> Location` open derived data folder in finder and remove everything from it manually. Then restart Xcode and compile your project without any errors.
