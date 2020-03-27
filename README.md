@@ -15,13 +15,11 @@
 # UIKitPlus Example 🧁
 An example project for [UIKitPlus](https://github.com/MihaelIsaev/UIKitPlus) library 👏
 
-**It works well since Xcode 11.4 and Swift 5.2.**
-
 ### Requirements
 
-The lib itself works with iOS9+ (yeah-yeah cause it is pure UIKit! it is not SwiftUI!)
+The lib itself works with **iOS9+** (yeah-yeah cause it is pure UIKit! it is not SwiftUI!)
 
-For successful compilation you need: **Swift 5.2+ and Xcode 11.4+** (and macOS Catalina if you want live preview)
+For successful compilation you need **Swift 5.2+ and Xcode 11.4+** (and macOS Catalina if you want live preview)
 
 ### How to use
 
