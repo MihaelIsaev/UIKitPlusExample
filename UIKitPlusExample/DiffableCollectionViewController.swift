@@ -1,4 +1,3 @@
-import UIKit
 import UIKitPlus
 
 class DiffableCollectionViewController: NavigationViewController {
@@ -9,13 +8,13 @@ class DiffableCollectionViewController: NavigationViewController {
         .scrollDirection(.vertical)
         .sectionInset(16)
     
-    @State var users: [User] = []
+    @UState var users: [User] = []
     
     override func buildUI() {
         title = "Diffable Collection"
         super.buildUI()
         navigationBar.body {
-            Button("Add more")
+            UButton("Add more")
                 .color(.black)
                 .width(80)
                 .edgesToSuperview(trailing: -16, bottom: -11)
@@ -23,14 +22,14 @@ class DiffableCollectionViewController: NavigationViewController {
         }
         body {
             Collection(flowLayout) {
-                ForEach($users) {
+                UForEach($users) {
                     UserCollectionView($0)
                 }
             }
             .hidden($users.map { $0.count == 0 })
             .top(to: navigationBar)
             .edgesToSuperview(leading: 0, trailing: 0, bottom: 0)
-            Text("No users added yet 🤷‍♂️\nAdd them by pressing top right button")
+            UText("No users added yet 🤷‍♂️\nAdd them by pressing top right button")
                 .alignment(.center)
                 .multiline()
                 .color(.blackHole)
@@ -50,3 +49,17 @@ class DiffableCollectionViewController: NavigationViewController {
         users.append(contentsOf: moreUsers)
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct DiffableCollectionViewController_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var device: UIKitPreviewDevice { .iPhoneX }
+    static var view: UIView {
+        let vc = DiffableCollectionViewController()
+        vc.addMore()
+        return vc.view
+    }
+}
+#endif

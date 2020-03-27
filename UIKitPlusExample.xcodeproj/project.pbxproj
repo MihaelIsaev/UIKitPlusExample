@@ -51,7 +51,6 @@
 		25B820C5237168E800A60A5C /* UIKitPlus in Frameworks */ = {isa = PBXBuildFile; productRef = 25B820AE237168E800A60A5C /* UIKitPlus */; };
 		25B820C7237168E800A60A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FF236A9C8900A0A59F /* LaunchScreen.storyboard */; };
 		25B820C8237168E800A60A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2560A1FD236A9C8900A0A59F /* Assets.xcassets */; };
-		25B820CE2371690E00A60A5C /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2560A213236AAC4300A0A59F /* Live.swift */; };
 		25B820D023717CEB00A60A5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B820CF23717CEB00A60A5C /* MapViewController.swift */; };
 		25B820D123717CEB00A60A5C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B820CF23717CEB00A60A5C /* MapViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,7 +64,6 @@
 		2560A200236A9C8900A0A59F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2560A202236A9C8900A0A59F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2560A20E236AA1F700A0A59F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		2560A213236AAC4300A0A59F /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		2560A216236AAD3200A0A59F /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		2560A218236AAD9D00A0A59F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2560A21A236AAF7C00A0A59F /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		2560A1F3236A9C8600A0A59F /* UIKitPlusExample */ = {
 			isa = PBXGroup;
 			children = (
-				2560A213236AAC4300A0A59F /* Live.swift */,
 				2560A1F4236A9C8600A0A59F /* AppDelegate.swift */,
 				2560A1F6236A9C8600A0A59F /* SceneDelegate.swift */,
 				2560A20E236AA1F700A0A59F /* RootViewController.swift */,
@@ -297,7 +294,6 @@
 				2560A230236AD9CD00A0A59F /* UserCollectionView.swift in Sources */,
 				2560A20F236AA1F700A0A59F /* RootViewController.swift in Sources */,
 				25B820D023717CEB00A60A5C /* MapViewController.swift in Sources */,
-				25B820CE2371690E00A60A5C /* Live.swift in Sources */,
 				2560A232236ADFC600A0A59F /* ChatViewController.swift in Sources */,
 				2560A219236AAD9D00A0A59F /* Colors.swift in Sources */,
 				2560A23C236AE0DF00A0A59F /* MessageMyView.swift in Sources */,

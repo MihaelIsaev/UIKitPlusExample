@@ -1,7 +1,6 @@
-import UIKit
 import UIKitPlus
 
-class MessageMyView: View {
+class MessageMyView: UView {
     let message: Message
     
     init (_ message: Message) {
@@ -15,15 +14,15 @@ class MessageMyView: View {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @State var text: String
-    @State var time: String
+    @UState var text: String
+    @UState var time: String
     
     override func buildView() {
         super.buildView()
         height(>=49)
         body {
-            View {
-                Text($text)
+            UView {
+                UText($text)
                     .font(.helveticaNeueRegular, 15)
                     .color(.white)
                     .alignment(.right)
@@ -35,10 +34,24 @@ class MessageMyView: View {
             .background(0xC64072)
             .edgesToSuperview(top: 0, trailing: -15, bottom: 0)
             .leadingToSuperview(>=80)
-            Text($time)
+            UText($time)
                 .font(.helveticaNeueMedium, 13)
                 .color(0xC7CDD6)
                 .edgesToSuperview(leading: 11, bottom: 0)
         }
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct MessageMyView_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var device: UIKitPreviewDevice { .iPhoneX }
+    static var view: UIView {
+        MessageMyView(.init(id: UUID(), text: "Hello world!", time: "", my: true))
+            .centerYInSuperview()
+            .edgesToSuperview(h: 0)
+    }
+}
+#endif

@@ -1,20 +1,19 @@
-import UIKit
 import UIKitPlus
 
 class ChatViewController: NavigationViewController {
     override var statusBarStyle: StatusBarStyle { .dark }
     
-    @State var opponentAvatar: String = "https://avatars1.githubusercontent.com/u/1272610?s=460&v=4"
+    @UState var opponentAvatar: String = "https://avatars1.githubusercontent.com/u/1272610?s=460&v=4"
     
-    @State var messages: [Message] = []
+    @UState var messages: [Message] = []
     
-    var list: List!
+    var list: UList!
     
     override func buildUI() {
         super.buildUI()
         title = "Chat with iMike"
         navigationBar.body {
-            Image($opponentAvatar)
+            UImage($opponentAvatar)
                 .mode(.scaleAspectFill)
                 .size(40)
                 .circle()
@@ -22,18 +21,18 @@ class ChatViewController: NavigationViewController {
                 .trailing(to: .leading, of: navigationBar.titleLabel, -16)
         }
         body {
-            View {
+            UView {
                 // MARK: Messages Container
-                List {
-                    ForEach($messages) {
-                        View().height(16)
+                UList {
+                    UForEach($messages) {
+                        VSpace(16)
                         if $0.my {
                             MessageMyView($0)
                         } else {
                             MessageOpponentView($0)
                         }
                     }
-                    View().height(110)
+                    VSpace(110)
                 }
                 .separatorStyle(.none)
                 .itself(&list)
@@ -41,15 +40,15 @@ class ChatViewController: NavigationViewController {
                 .edgesToSuperview(top: 0, leading: 0, trailing: 0)
                 
                 // MARK: Bottom Bar
-                View {
-                    Button()
+                UView {
+                    UButton()
                         .image(.iconPaperclip)
                         .tint(0x9FA4B6)
                         .edgesToSuperview(top: 27, leading: 12)
                         .onTapGesture {
                             self.appendMessage("<attachment should be here> 🤯")
                     }
-                    TextField()
+                    UTextField()
                         .placeholder(AttrStr("Type your message").foreground(0x91969E).font(.helveticaNeueRegular, 15))
                         .color(.black)
                         .tint(.black)
@@ -68,7 +67,7 @@ class ChatViewController: NavigationViewController {
                             }
                             return false
                     }
-                    Button()
+                    UButton()
                         .image(.iconSmile)
                         .tint(0x9FA4B6)
                         .edgesToSuperview(top: 27, trailing: -12)
@@ -98,6 +97,10 @@ class ChatViewController: NavigationViewController {
     
     override func viewDidAppearFirstTime(_ animated: Bool) {
         super.viewDidAppearFirstTime(animated)
+        mockMessages()
+    }
+    
+    func mockMessages() {
         messages = [
             .init(id: UUID(), text: "Looks like good", time: "11:26 PM", my: false),
             .init(id: UUID(), text: "In hac habitasse platea dictumst. Vivamus adipiscing fermentum", time: "11:24 PM", my: false),
@@ -109,3 +112,17 @@ class ChatViewController: NavigationViewController {
         ]
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct ChatViewController_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var device: UIKitPreviewDevice { .iPhoneX }
+    static var view: UIView {
+        let vc = ChatViewController()
+        vc.mockMessages()
+        return vc.view
+    }
+}
+#endif

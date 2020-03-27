@@ -1,4 +1,3 @@
-import UIKit
 import UIKitPlus
 
 class RootViewController: SimpleRootController {
@@ -6,3 +5,13 @@ class RootViewController: SimpleRootController {
         NavigationController(MainViewController()).style(.transparent).hideNavigationBar()
     }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct RootViewController_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var device: UIKitPreviewDevice { .iPhoneX }
+    static var view: UIView { RootViewController().view }
+}
+#endif

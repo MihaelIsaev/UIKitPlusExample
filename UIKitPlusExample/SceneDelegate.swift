@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mihael Isaev. All rights reserved.
 //
 
-import UIKit
+import UIKitPlus
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

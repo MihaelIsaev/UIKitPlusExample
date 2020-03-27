@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mihael Isaev. All rights reserved.
 //
 
-import UIKit
+import UIKitPlus
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,13 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-//        UIFont.printAll()
         if #available(iOS 13.0, *) {
             // use scene delegate
         } else {
             window = UIWindow(frame: UIScreen.main.bounds)
             RootViewController().attach(to: window)
         }
+//        UIFont.printAll() // uncomment to print all available fonts in console
         return true
     }
 

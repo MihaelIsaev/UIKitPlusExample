@@ -1,4 +1,3 @@
-import UIKit
 import UIKitPlus
 
 /// if you pinned canvas in `Live.swift`
@@ -8,10 +7,10 @@ class MainViewController: ViewController {
     /// which works for every view controller if you use `RootController`
     override var statusBarStyle: StatusBarStyle { .light } /// doesn't work in live preview
     
-    @State var githubOpened = false
+    @UState var githubOpened = false
     
-    lazy var titleText = Text()
-    lazy var imageView = Image(.wwdcLogo)
+    lazy var titleText = UText()
+    lazy var imageView = UImage(.wwdcLogo)
     
     override func buildUI() {
         super.buildUI()
@@ -30,20 +29,20 @@ class MainViewController: ViewController {
                 .border(2, .white)
                 .top(to: titleText, 44)
                 .centerXInSuperview()
-            StaticList {
-                Button.gray.title("Diffable List").onTapGesture {
+            VScrollStack {
+                UButton.gray.title("Diffable List").onTapGesture {
                     self.pushViewController(DiffableListViewController())
                 }
-                View().height(10)
-                Button.gray.title("Diffable Collection").onTapGesture {
+                VSpace(10)
+                UButton.gray.title("Diffable Collection").onTapGesture {
                     self.pushViewController(DiffableCollectionViewController())
                 }
-                View().height(10)
-                Button.gray.title("Simple Chat in 5 mins").onTapGesture {
+                VSpace(10)
+                UButton.gray.title("Simple Chat in 5 mins").onTapGesture {
                     self.pushViewController(ChatViewController())
                 }
-                View().height(10)
-                Button.gray.title("Map View").onTapGesture {
+                VSpace(10)
+                UButton.gray.title("Map View").onTapGesture {
                     self.pushViewController(MapViewController())
                 }
             }
@@ -51,25 +50,18 @@ class MainViewController: ViewController {
             .top(to: imageView, 44)
             .edgesToSuperview(leading: 16, trailing: -16)
             .bottomToSuperview(-110, safeArea: true)
-            VStack {
-                Text("If you like this lib please give it a ⭐️")
+            UVStack {
+                UText("If you like UIKitPlus please give it a ⭐️")
                     .multiline() // the same as `lines = 0`
                     .alignment(.center)
                     .font(.helveticaNeueRegular, 18)
-                Button.github.title("Go to github!").onTapGesture {
-                    guard let url = URL(string: "https://github.com/MihaelIsaev/UIKitPlus") else { return }
-                    if #available(iOS 10.0, *) {
-                        UIApplication.shared.open(url, options: [:]) { self.githubOpened = $0 }
-                    } else {
-                        self.githubOpened = UIApplication.shared.openURL(url)
-                    }
-                }
+                UButton.github.title("Go to github!").onTapGesture(openGithub)
             }
             .hidden($githubOpened)
             .spacing(10)
             .edgesToSuperview(leading: 16, trailing: -16)
             .bottomToSuperview(-16, safeArea: true)
-            Text("🎉 Thank you very much!!! ❤️").alignment(.center)
+            UText("🎉 Thank you very much!!! ❤️").alignment(.center)
                 .hidden($githubOpened.map { !$0 })
                 .edgesToSuperview(leading: 0, trailing: 0)
                 .bottomToSuperview(-30, safeArea: true)
@@ -79,4 +71,23 @@ class MainViewController: ViewController {
     func pushViewController(_ vc: UIViewController) {
         navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func openGithub() {
+        guard let url = URL(string: "https://github.com/MihaelIsaev/UIKitPlus") else { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:]) { self.githubOpened = $0 }
+        } else {
+            self.githubOpened = UIApplication.shared.openURL(url)
+        }
+    }
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct MainViewController_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .dark }
+    static var device: UIKitPreviewDevice { .iPhoneX }
+    static var view: UIView { MainViewController().view }
+}
+#endif

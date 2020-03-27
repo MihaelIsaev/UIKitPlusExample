@@ -17,3 +17,33 @@ extension FontIdentifier {
     static var helveticaNeueMedium = FontIdentifier("HelveticaNeue-Medium")
     static var helveticaNeueBold = FontIdentifier("HelveticaNeue-Bold")
 }
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct HelveticaNeueRegular_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var layout: PreviewLayout { .fixed(width: 375, height: 50) }
+    static var view: UIView {
+        UText("This is helvetica neue regular font").font(.helveticaNeueRegular, 16).centerInSuperview().color(.black / .white)
+    }
+}
+@available(iOS 13.0, *)
+struct HelveticaNeueMedium_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var layout: PreviewLayout { .fixed(width: 375, height: 50) }
+    static var view: UIView {
+        UText("This is helvetica neue medium font").font(.helveticaNeueMedium, 16).centerInSuperview().color(.black / .white)
+    }
+}
+@available(iOS 13.0, *)
+struct HelveticaNeueBold_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var layout: PreviewLayout { .fixed(width: 375, height: 50) }
+    static var view: UIView {
+        UText("This is helvetica neue bold font").font(.helveticaNeueBold, 16).centerInSuperview().color(.black / .white)
+    }
+}
+#endif
+
+

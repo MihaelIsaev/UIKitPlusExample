@@ -1,4 +1,3 @@
-import UIKit
 import UIKitPlus
 import MapKit
 import CoreLocation
@@ -16,7 +15,7 @@ class MapViewController: NavigationViewController {
         title = "Map View"
         view.backgroundColor = .darkGray / .black
         body {
-            View(inline: mapView)
+            UView(inline: mapView)
                 .masksToBounds()
                 .corners(10)
                 .top(to: navigationBar, 16, safeArea: true)
@@ -34,6 +33,8 @@ class MapViewController: NavigationViewController {
         super.viewDidDisappear(animated)
         stopTrackingLocation()
     }
+    
+    deinit { print("map view deinit") }
 }
 
 extension MapViewController {
@@ -83,3 +84,13 @@ extension MapViewController: CLLocationManagerDelegate {
 }
 
 extension MapViewController: MKMapViewDelegate {}
+
+#if canImport(SwiftUI) && DEBUG
+import SwiftUI
+@available(iOS 13.0, *)
+struct MapViewController_Preview: PreviewProvider, UIKitPreviewProvider {
+    static var colorScheme: PreviewColorScheme { .light }
+    static var device: UIKitPreviewDevice { .iPhoneX }
+    static var view: UIView { MapViewController().view }
+}
+#endif
