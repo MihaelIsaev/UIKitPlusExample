@@ -17,13 +17,11 @@ An example project for [UIKitPlus](https://github.com/MihaelIsaev/UIKitPlus) lib
 
 **It works well since Xcode 11.4 and Swift 5.2.**
 
-Otherwise [Xcode 11.1 and Swift 5.1.0](https://developer.apple.com/download/more/) only, don't try it with Swift 5.1.1, 5.1.2, 5.1.3, 5.1.4 because of its bugs.
-
 ### Requirements
 
-This example is written for Xcode 11 (and macOS Catalina if you want live preview)
-
 The lib itself works with iOS9+ (yeah-yeah cause it is pure UIKit! it is not SwiftUI!)
+
+For successful compilation you need: **Swift 5.2+ and Xcode 11.4+** (and macOS Catalina if you want live preview)
 
 ### How to use
 
@@ -31,11 +29,21 @@ Just download it, open `UIKitPlusExample.xcodeproj` and that's it
 
 ### Live Preview 🎉
 
-To see Live Preview just go to `Live.swift` and pin the canvas
+To see Live Preview just go to any file where you see `PreviewProvider` at the bottom and pin the canvas
 
 Again: `SwiftUI` here is only for `Live Preview` the lib itself is pure `UIKit`
 
-<img width="1392" alt="Screen Shot 2019-10-31 at 10 42 08" src="https://user-images.githubusercontent.com/1272610/67925022-8a602380-fbcb-11e9-9901-0d0882bf0d5a.png">
+##### Main View Controller live preview
+<img width="1392" alt="View Controller Live Preview" src="https://user-images.githubusercontent.com/1272610/77775933-b0003480-7066-11ea-8637-d9d45f2c892b.png">
+##### Chat View Controller live preview
+<img width="1392" alt="Chat View Controller" src="https://user-images.githubusercontent.com/1272610/77775705-5ac42300-7066-11ea-8f72-15eba7d2e19d.png">
+##### Custom fonts live preview
+<img width="1392" alt="Custom fonts" src="https://user-images.githubusercontent.com/1272610/77775757-6e6f8980-7066-11ea-8587-9ddf5fede14f.png">
+##### Custom colors live preview
+<img width="1392" alt="Custom dynamic colors" src="https://user-images.githubusercontent.com/1272610/77775818-83e4b380-7066-11ea-8171-2ab812f67bf8.png">
+##### Custom buttons live preview
+<img width="1392" alt="Custom buttons" src="https://user-images.githubusercontent.com/1272610/77775888-a1b21880-7066-11ea-9035-f35e96a8e812.png">
+
 
 ### More examples
 
