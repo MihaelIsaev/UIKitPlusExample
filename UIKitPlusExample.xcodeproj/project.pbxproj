@@ -469,6 +469,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -486,6 +490,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -506,6 +514,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -524,6 +536,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-weak_framework",
+					SwiftUI,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
