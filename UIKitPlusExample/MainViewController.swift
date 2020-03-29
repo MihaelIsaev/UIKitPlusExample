@@ -17,7 +17,7 @@ class MainViewController: ViewController {
         view.backgroundColor = .darkGray / .black
         body {
             titleText
-                .text("UIKit is a 🧁")
+                .text(.en("UIKit is a 🧁"), .ru("UIKit еще хорош! 🔥"))
                 .font(.helveticaNeueBold, 30)
                 .color(.white)
                 .topToSuperview(44, safeArea: true)
@@ -38,7 +38,7 @@ class MainViewController: ViewController {
                     self.pushViewController(DiffableCollectionViewController())
                 }
                 VSpace(10)
-                UButton.gray.title("Simple Chat in 5 mins").onTapGesture {
+                UButton.gray.title(.en("Simple Chat in 5 mins"), .ru("Простой чат за 6 минут")).onTapGesture {
                     self.pushViewController(ChatViewController())
                 }
                 VSpace(10)
@@ -51,19 +51,25 @@ class MainViewController: ViewController {
             .edgesToSuperview(leading: 16, trailing: -16)
             .bottomToSuperview(-110, safeArea: true)
             UVStack {
-                UText(String(.en("If you like UIKitPlus please give it a ⭐️"), .ru("Плиз поставь ⭐️")))
+                UText(.en("If you like UIKitPlus please give it a ⭐️"), .ru("Плиз поставь ⭐️"))
                     .multiline() // the same as `lines = 0`
                     .alignment(.center)
                     .font(.helveticaNeueRegular, 18)
-                UButton.github
-                    .title(String(.en("Go to github!"), .ru("Перейти на github!")))
-                    .onTapGesture(openGithub)
+                UHStack {
+                    UButton.github
+                        .title(.en("Go to github!"), .ru("Перейти на github!"))
+                        .onTapGesture(openGithub)
+                    UButton.gray
+                        .title(.en("OK"), .ru("Оки!"))
+                        .width(80)
+                        .onTapGesture { self.githubOpened = true }
+                }.spacing(8)
             }
             .hidden($githubOpened)
             .spacing(10)
             .edgesToSuperview(leading: 16, trailing: -16)
             .bottomToSuperview(-16, safeArea: true)
-            UText(String(.en("🎉 Thank you very much!!! ❤️"), .ru("🎉 Спасибо большое!!! ❤️")))
+            UText(.en("🎉 Thank you very much!!! ❤️"), .ru("🎉 Спасибо большое!!! ❤️"))
                 .alignment(.center)
                 .hidden($githubOpened.map { !$0 })
                 .edgesToSuperview(leading: 0, trailing: 0)
