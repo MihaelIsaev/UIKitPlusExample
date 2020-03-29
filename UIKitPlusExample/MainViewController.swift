@@ -17,7 +17,7 @@ class MainViewController: ViewController {
         view.backgroundColor = .darkGray / .black
         body {
             titleText
-                .text("UIKitPlus is a 🧁")
+                .text("UIKit is a 🧁")
                 .font(.helveticaNeueBold, 30)
                 .color(.white)
                 .topToSuperview(44, safeArea: true)
@@ -51,17 +51,20 @@ class MainViewController: ViewController {
             .edgesToSuperview(leading: 16, trailing: -16)
             .bottomToSuperview(-110, safeArea: true)
             UVStack {
-                UText("If you like UIKitPlus please give it a ⭐️")
+                UText(String(.en("If you like UIKitPlus please give it a ⭐️"), .ru("Плиз поставь ⭐️")))
                     .multiline() // the same as `lines = 0`
                     .alignment(.center)
                     .font(.helveticaNeueRegular, 18)
-                UButton.github.title("Go to github!").onTapGesture(openGithub)
+                UButton.github
+                    .title(String(.en("Go to github!"), .ru("Перейти на github!")))
+                    .onTapGesture(openGithub)
             }
             .hidden($githubOpened)
             .spacing(10)
             .edgesToSuperview(leading: 16, trailing: -16)
             .bottomToSuperview(-16, safeArea: true)
-            UText("🎉 Thank you very much!!! ❤️").alignment(.center)
+            UText(String(.en("🎉 Thank you very much!!! ❤️"), .ru("🎉 Спасибо большое!!! ❤️")))
+                .alignment(.center)
                 .hidden($githubOpened.map { !$0 })
                 .edgesToSuperview(leading: 0, trailing: 0)
                 .bottomToSuperview(-30, safeArea: true)
@@ -85,9 +88,14 @@ class MainViewController: ViewController {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct MainViewController_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .dark }
-    static var device: UIKitPreviewDevice { .iPhoneX }
-    static var view: UIView { MainViewController().view }
+struct MainViewController_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            MainViewController()
+        }
+        .colorScheme(.dark)
+        .device(.iPhoneX)
+        .language(.ru)
+    }
 }
 #endif

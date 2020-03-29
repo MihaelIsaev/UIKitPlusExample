@@ -45,13 +45,16 @@ class MessageOpponentView: UView {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct MessageOpponentView_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var device: UIKitPreviewDevice { .iPhoneX }
-    static var view: UIView {
-        MessageOpponentView(.init(id: UUID(), text: "Hello world!", time: "", my: true))
-            .centerYInSuperview()
-            .edgesToSuperview(h: 0)
+struct MessageOpponentView_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            MessageOpponentView(.init(id: UUID(), text: "Hello world!", time: "", my: true))
+                .centerYInSuperview()
+                .edgesToSuperview(h: 0)
+        }
+        .colorScheme(.light)
+        .device(.iPhoneX)
+        .language(.en)
     }
 }
 #endif

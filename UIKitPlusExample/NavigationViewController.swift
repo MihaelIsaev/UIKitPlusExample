@@ -27,9 +27,14 @@ class NavigationViewController: ViewController {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct NavigationViewController_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var device: UIKitPreviewDevice { .iPhoneX }
-    static var view: UIView { NavigationViewController().view }
+struct NavigationViewController_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            NavigationViewController()
+        }
+        .colorScheme(.light)
+        .device(.iPhoneX)
+        .language(.en)
+    }
 }
 #endif

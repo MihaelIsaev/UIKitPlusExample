@@ -50,16 +50,25 @@ class DiffableCollectionViewController: NavigationViewController {
     }
 }
 
+extension DiffableCollectionViewController {
+    static var mock: DiffableCollectionViewController {
+        let vc = DiffableCollectionViewController()
+        vc.addMore()
+        return vc
+    }
+}
+
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct DiffableCollectionViewController_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var device: UIKitPreviewDevice { .iPhoneX }
-    static var view: UIView {
-        let vc = DiffableCollectionViewController()
-        vc.addMore()
-        return vc.view
+struct DiffableCollectionViewController_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            DiffableCollectionViewController.mock
+        }
+        .colorScheme(.light)
+        .device(.iPhoneX)
+        .language(.en)
     }
 }
 #endif

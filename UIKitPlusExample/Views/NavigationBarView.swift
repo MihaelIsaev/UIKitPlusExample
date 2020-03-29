@@ -29,9 +29,14 @@ class NavigationBarView: UView {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct NavigationBarView_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .dark }
-    static var device: UIKitPreviewDevice { .iPhoneX }
-    static var view: UIView { NavigationBarView() }
+struct NavigationBarView_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            NavigationBarView()
+        }
+        .colorScheme(.dark)
+        .device(.iPhoneX)
+        .language(.en)
+    }
 }
 #endif

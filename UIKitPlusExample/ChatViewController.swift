@@ -102,7 +102,7 @@ class ChatViewController: NavigationViewController {
     
     func mockMessages() {
         messages = [
-            .init(id: UUID(), text: "Looks like good", time: "11:26 PM", my: false),
+            .init(id: UUID(), text: "Looks like good", time: "11:26 PM", my: true),
             .init(id: UUID(), text: "In hac habitasse platea dictumst. Vivamus adipiscing fermentum", time: "11:24 PM", my: false),
             .init(id: UUID(), text: "Ok :)", time: "07:38 PM", my: false),
             .init(id: UUID(), text: "In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.", time: "07:36 PM", my: true),
@@ -113,16 +113,25 @@ class ChatViewController: NavigationViewController {
     }
 }
 
+extension ChatViewController {
+    static var mock: ChatViewController {
+        let vc = ChatViewController()
+        vc.mockMessages()
+        return vc
+    }
+}
+
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct ChatViewController_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var device: UIKitPreviewDevice { .iPhoneX }
-    static var view: UIView {
-        let vc = ChatViewController()
-        vc.mockMessages()
-        return vc.view
+struct ChatViewController_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            ChatViewController.mock
+        }
+        .colorScheme(.light)
+        .device(.iPhoneX)
+        .language(.en)
     }
 }
 #endif

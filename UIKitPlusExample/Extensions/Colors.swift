@@ -16,9 +16,13 @@ extension UIColor {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct DynamicColor_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var layout: PreviewLayout { .fixed(width: 100, height: 50) }
-    static var view: UIView { UView().edgesToSuperview().background(.dynamicColor) }
+struct DynamicColor_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            UView().edgesToSuperview().background(.dynamicColor)
+        }
+        .colorScheme(.light)
+        .layout(.fixed(width: 100, height: 50))
+    }
 }
 #endif

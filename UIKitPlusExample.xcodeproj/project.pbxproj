@@ -586,7 +586,7 @@
 			repositoryURL = "https://github.com/MihaelIsaev/UIKitPlus";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.15.3;
+				minimumVersion = 1.17.1;
 			};
 		};
 		25B820AF237168E800A60A5C /* XCRemoteSwiftPackageReference "UIKitPlus" */ = {

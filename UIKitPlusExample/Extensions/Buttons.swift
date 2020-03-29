@@ -25,29 +25,41 @@ extension UButton {
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct BackButton_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var layout: PreviewLayout { .fixed(width: 50, height: 50) }
-    static var view: UIView { UButton.back.centerInSuperview() }
+struct BackButton_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            UButton.back.centerInSuperview()
+        }
+        .colorScheme(.light)
+        .layout(.fixed(width: 50, height: 50))
+    }
 }
 #endif
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct GrayButton_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .dark }
-    static var layout: PreviewLayout { .fixed(width: 375, height: 60) }
-    static var view: UIView { UButton.gray.title("Gray Button").edgesToSuperview(h: 8).centerYInSuperview() }
+struct GrayButton_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            UButton.gray.title("Gray Button").edgesToSuperview(h: 8).centerYInSuperview()
+        }
+        .colorScheme(.dark)
+        .layout(.fixed(width: 375, height: 60))
+    }
 }
 #endif
 
 #if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct GithubButton_Preview: PreviewProvider, UIKitPreviewProvider {
-    static var colorScheme: PreviewColorScheme { .light }
-    static var layout: PreviewLayout { .fixed(width: 375, height: 60) }
-    static var view: UIView { UButton.github.title("Github").edgesToSuperview(h: 8).centerYInSuperview() }
+struct GithubButton_Preview: PreviewProvider, DeclarativePreview {
+    static var preview: Preview {
+        Preview {
+            UButton.github.title("Github").edgesToSuperview(h: 8).centerYInSuperview()
+        }
+        .colorScheme(.light)
+        .layout(.fixed(width: 375, height: 60))
+    }
 }
 #endif
