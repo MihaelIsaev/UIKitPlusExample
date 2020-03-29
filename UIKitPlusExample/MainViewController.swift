@@ -95,7 +95,7 @@ struct MainViewController_Preview: PreviewProvider, DeclarativePreview {
         }
         .colorScheme(.dark)
         .device(.iPhoneX)
-        .language(.ru)
+        .language(.en)
     }
 }
 #endif
