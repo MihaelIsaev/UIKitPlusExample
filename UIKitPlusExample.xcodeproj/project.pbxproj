@@ -81,6 +81,7 @@
 		2560A23D236AE0EC00A0A59F /* MessageOpponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageOpponentView.swift; sourceTree = "<group>"; };
 		25B820CC237168E800A60A5C /* UIKitPlusExampleiOS9+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKitPlusExampleiOS9+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25B820CF23717CEB00A60A5C /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		25C3BE482433EFEE00C6EA35 /* UIKitPlusExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIKitPlusExample.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		2560A1F3236A9C8600A0A59F /* UIKitPlusExample */ = {
 			isa = PBXGroup;
 			children = (
+				25C3BE482433EFEE00C6EA35 /* UIKitPlusExample.entitlements */,
 				2560A1F4236A9C8600A0A59F /* AppDelegate.swift */,
 				2560A1F6236A9C8600A0A59F /* SceneDelegate.swift */,
 				2560A20E236AA1F700A0A59F /* RootViewController.swift */,
@@ -462,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UIKitPlusExample/UIKitPlusExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIKitPlusExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -475,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -484,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UIKitPlusExample/UIKitPlusExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UIKitPlusExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -497,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mihaelisaev.UIKitPlusExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
