@@ -25,7 +25,7 @@ extension UButton {
 #if canImport(SwiftUI)
 import SwiftUI
 @available(iOS 13.0, *)
-struct BackButton_Preview: PreviewProvider, DeclarativePreviewGroup {
+struct Buttons_Preview: PreviewProvider, DeclarativePreviewGroup {
     static var previewGroup: PreviewGroup {
         PreviewGroup {
             Preview {
