@@ -26,7 +26,7 @@ class NavigationBarView: UView {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
+#if canImport(SwiftUI)
 import SwiftUI
 @available(iOS 13.0, *)
 struct NavigationBarView_Preview: PreviewProvider, DeclarativePreview {

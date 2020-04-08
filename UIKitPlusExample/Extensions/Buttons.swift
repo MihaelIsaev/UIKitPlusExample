@@ -22,44 +22,31 @@ extension UButton {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
+#if canImport(SwiftUI)
 import SwiftUI
 @available(iOS 13.0, *)
-struct BackButton_Preview: PreviewProvider, DeclarativePreview {
-    static var preview: Preview {
-        Preview {
-            UButton.back.centerInSuperview()
+struct BackButton_Preview: PreviewProvider, DeclarativePreviewGroup {
+    static var previewGroup: PreviewGroup {
+        PreviewGroup {
+            Preview {
+                UButton.back.centerInSuperview()
+            }
+            .title("back")
+            .colorScheme(.light)
+            .layout(.fixed(width: 50, height: 50))
+            Preview {
+                UButton.gray.title("Gray Button").edgesToSuperview(h: 8).centerYInSuperview()
+            }
+            .title("gray")
+            .colorScheme(.dark)
+            .layout(.fixed(width: 375, height: 60))
+            Preview {
+                UButton.github.title("Github").edgesToSuperview(h: 8).centerYInSuperview()
+            }
+            .title("github")
+            .colorScheme(.light)
+            .layout(.fixed(width: 375, height: 60))
         }
-        .colorScheme(.light)
-        .layout(.fixed(width: 50, height: 50))
-    }
-}
-#endif
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-@available(iOS 13.0, *)
-struct GrayButton_Preview: PreviewProvider, DeclarativePreview {
-    static var preview: Preview {
-        Preview {
-            UButton.gray.title("Gray Button").edgesToSuperview(h: 8).centerYInSuperview()
-        }
-        .colorScheme(.dark)
-        .layout(.fixed(width: 375, height: 60))
-    }
-}
-#endif
-
-#if canImport(SwiftUI) && DEBUG
-import SwiftUI
-@available(iOS 13.0, *)
-struct GithubButton_Preview: PreviewProvider, DeclarativePreview {
-    static var preview: Preview {
-        Preview {
-            UButton.github.title("Github").edgesToSuperview(h: 8).centerYInSuperview()
-        }
-        .colorScheme(.light)
-        .layout(.fixed(width: 375, height: 60))
     }
 }
 #endif

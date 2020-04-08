@@ -6,7 +6,7 @@ class RootViewController: SimpleRootController {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
+#if canImport(SwiftUI)
 import SwiftUI
 @available(iOS 13.0, *)
 struct RootViewController_Preview: PreviewProvider, DeclarativePreview {

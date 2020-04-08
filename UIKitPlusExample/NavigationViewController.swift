@@ -24,7 +24,7 @@ class NavigationViewController: ViewController {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
+#if canImport(SwiftUI)
 import SwiftUI
 @available(iOS 13.0, *)
 struct NavigationViewController_Preview: PreviewProvider, DeclarativePreview {

@@ -121,7 +121,7 @@ extension ChatViewController {
     }
 }
 
-#if canImport(SwiftUI) && DEBUG
+#if canImport(SwiftUI)
 import SwiftUI
 @available(iOS 13.0, *)
 struct ChatViewController_Preview: PreviewProvider, DeclarativePreview {
