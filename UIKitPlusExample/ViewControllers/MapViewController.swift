@@ -10,6 +10,10 @@ class MapViewController: NavigationViewController {
     var mapAnnotation: MKPointAnnotation?
     let locationManager = CLLocationManager()
     
+    deinit {
+        print("MapViewController deinit")
+    }
+    
     override func buildUI() {
         super.buildUI()
         title = "Map View"
@@ -33,8 +37,6 @@ class MapViewController: NavigationViewController {
         super.viewDidDisappear(animated)
         stopTrackingLocation()
     }
-    
-    deinit { print("map view deinit") }
 }
 
 extension MapViewController {

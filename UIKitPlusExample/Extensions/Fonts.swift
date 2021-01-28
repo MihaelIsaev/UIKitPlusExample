@@ -1,3 +1,11 @@
+//
+//  Fonts.swift
+//  UIKitPlusExample
+//
+//  Created by Mihael Isaev on 29.01.2021.
+//  Copyright © 2021 Swift Stream. All rights reserved.
+//
+
 import UIKitPlus
 
 /// Declare your custom fonts this way
@@ -18,24 +26,33 @@ extension FontIdentifier {
     static var helveticaNeueBold = FontIdentifier("HelveticaNeue-Bold")
 }
 
-#if canImport(SwiftUI)
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
-struct HelveticaNeue_Preview: PreviewProvider, DeclarativePreviewGroup {
+struct Fonts_Preview: PreviewProvider, DeclarativePreviewGroup {
     static var previewGroup: PreviewGroup {
         PreviewGroup {
             Preview {
-                UText("This is helvetica neue regular font").font(.helveticaNeueRegular, 16).centerInSuperview().color(.black / .white)
+                UText("This is helvetica neue regular font")
+                    .font(.helveticaNeueRegular, 16)
+                    .centerInSuperview()
+                    .color(.black / .white)
             }
             .colorScheme(.light)
             .layout(.fixed(width: 375, height: 50))
             Preview {
-                UText("This is helvetica neue medium font").font(.helveticaNeueMedium, 16).centerInSuperview().color(.black / .white)
+                UText("This is helvetica neue medium font")
+                    .font(.helveticaNeueMedium, 16)
+                    .centerInSuperview()
+                    .color(.black / .white)
             }
             .colorScheme(.light)
             .layout(.fixed(width: 375, height: 50))
             Preview {
-                UText("This is helvetica neue bold font").font(.helveticaNeueBold, 16).centerInSuperview().color(.black / .white)
+                UText("This is helvetica neue bold font")
+                    .font(.helveticaNeueBold, 16)
+                    .centerInSuperview()
+                    .color(.black / .white)
             }
             .colorScheme(.light)
             .layout(.fixed(width: 375, height: 50))

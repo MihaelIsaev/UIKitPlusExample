@@ -1,10 +1,10 @@
 import UIKitPlus
 
 class NavigationBarView: UView {
-    lazy var backButton = Button.back
+    lazy var backButton = UButton.back
         .edgesToSuperview(leading: 16, bottom: -20)
     
-    lazy var titleLabel = Text()
+    lazy var titleLabel = UText()
         .alignment(.center)
         .font(.helveticaNeueMedium, 18)
         .color(0x1c1c1c.color / .white)

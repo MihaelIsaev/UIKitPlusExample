@@ -13,8 +13,8 @@ class NavigationViewController: ViewController {
         body {
             navigationBar
         }
-        navigationBar.backButton.onTapGesture {
-            self.navigationController?.popViewController(animated: true)
+        navigationBar.backButton.onTapGesture { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
         }
     }
     

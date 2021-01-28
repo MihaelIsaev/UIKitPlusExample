@@ -1,11 +1,19 @@
+//
+//  MainViewController.swift
+//  UIKitPlusExample
+//
+//  Created by Mihael Isaev on 29.01.2021.
+//  Copyright © 2021 Swift Stream. All rights reserved.
+//
+
 import UIKitPlus
 
-/// if you pinned canvas in `Live.swift`
-/// then try to change anything here to see live preview
 class MainViewController: ViewController {
     /// iOS9+ representation for `preferredStatusBarStyle`
     /// which works for every view controller if you use `RootController`
-    override var statusBarStyle: StatusBarStyle { .light } /// doesn't work in live preview
+    /// NOTE: it is not affecting live preview,
+    /// so you could see how it works in the app only
+    override var statusBarStyle: StatusBarStyle { .light }
     
     @UState var githubOpened = false
     
@@ -29,19 +37,19 @@ class MainViewController: ViewController {
                 .border(2, .white)
                 .top(to: titleText, 44)
                 .centerXInSuperview()
-            VScrollStack {
+            UVScrollStack {
                 UButton.gray.title("Diffable List").onTapGesture {
                     self.pushViewController(DiffableListViewController())
                 }
-                VSpace(10)
+                UVSpace(10)
                 UButton.gray.title("Diffable Collection").onTapGesture {
                     self.pushViewController(DiffableCollectionViewController())
                 }
-                VSpace(10)
+                UVSpace(10)
                 UButton.gray.title(.en("Simple Chat in 5 mins"), .ru("Простой чат за 6 минут")).onTapGesture {
                     self.pushViewController(ChatViewController())
                 }
-                VSpace(10)
+                UVSpace(10)
                 UButton.gray.title("Map View").onTapGesture {
                     self.pushViewController(MapViewController())
                 }
@@ -55,15 +63,22 @@ class MainViewController: ViewController {
                     .multiline() // the same as `lines = 0`
                     .alignment(.center)
                     .font(.helveticaNeueRegular, 18)
-                UHStack {
-                    UButton.github
-                        .title(.en("Go to github!"), .ru("Перейти на github!"))
-                        .onTapGesture(openGithub)
-                    UButton.gray
-                        .title(.en("OK"), .ru("Оки!"))
-                        .width(80)
-                        .onTapGesture { self.githubOpened = true }
-                }.spacing(8)
+                UView {
+                    UHStack {
+                        UButton.github
+                            .width(200)
+                            .title(.en("Go to github!"), .ru("Перейти на github!"))
+                            .onTapGesture(openGithub)
+                        UButton.gray
+                            .title(.en("OK"), .ru("Оки!"))
+                            .width(80)
+                            .onTapGesture { self.githubOpened = true }
+                    }
+                    .spacing(8)
+                    .centerXInSuperview()
+                    .edgesToSuperview(v: 0)
+                }
+                UVSpace(44)
             }
             .hidden($githubOpened)
             .spacing(10)
@@ -91,7 +106,8 @@ class MainViewController: ViewController {
     }
 }
 
-#if canImport(SwiftUI)
+
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
 struct MainViewController_Preview: PreviewProvider, DeclarativePreview {
@@ -102,6 +118,7 @@ struct MainViewController_Preview: PreviewProvider, DeclarativePreview {
         .colorScheme(.dark)
         .device(.iPhoneX)
         .language(.en)
+        .title("Main screen")
     }
 }
 #endif

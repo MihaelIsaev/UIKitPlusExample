@@ -5,6 +5,10 @@ class DiffableListViewController: NavigationViewController {
     
     @UState var users: [User] = []
     
+    deinit {
+        print("DiffableListViewController deinit")
+    }
+    
     override func buildUI() {
         title = "Diffable List"
         super.buildUI()
@@ -13,14 +17,16 @@ class DiffableListViewController: NavigationViewController {
                 .color(.black)
                 .width(80)
                 .edgesToSuperview(trailing: -16, bottom: -11)
-                .onTapGesture(addMore)
+                .onTapGesture { [weak self] in
+                    self?.addMore()
+                }
         }
         body {
             UList {
-                VSpace(10)
+                UVSpace(10)
                 UForEach($users) { /// you could use it like section
                     UserListView($0)
-                    VSpace(8)
+                    UVSpace(8)
                 }
             }
             .hidden($users.map { $0.count == 0 })
@@ -40,7 +46,11 @@ class DiffableListViewController: NavigationViewController {
     func addMore() {
         let moreQuantity = 10
         let moreUsers = (lastAvatarKey...lastAvatarKey + moreQuantity).map {
-            User(id: UUID(), name: "User #\($0)", avatarURL: "https://avatars1.githubusercontent.com/u/\($0)?s=460&v=4")
+            User(
+                id: UUID(),
+                name: "User #\($0)",
+                avatarURL: "https://avatars1.githubusercontent.com/u/\($0)?s=460&v=4"
+            )
         }
         lastAvatarKey += moreQuantity
         users.append(contentsOf: moreUsers)

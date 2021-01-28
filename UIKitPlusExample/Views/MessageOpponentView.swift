@@ -48,9 +48,15 @@ import SwiftUI
 struct MessageOpponentView_Preview: PreviewProvider, DeclarativePreview {
     static var preview: Preview {
         Preview {
-            MessageOpponentView(.init(id: UUID(), text: "Hello world!", time: "", my: true))
-                .centerYInSuperview()
-                .edgesToSuperview(h: 0)
+            MessageOpponentView(
+                .init(
+                    id: UUID(),
+                    text: "Hello world!",
+                    time: "",
+                    my: true)
+            )
+            .centerYInSuperview()
+            .edgesToSuperview(h: 0)
         }
         .colorScheme(.light)
         .device(.iPhoneX)

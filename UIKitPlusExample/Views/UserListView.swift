@@ -33,9 +33,13 @@ import SwiftUI
 struct UserListView_Preview: PreviewProvider, DeclarativePreview {
     static var preview: Preview {
         Preview {
-            UserListView(.init(id: UUID(),
-                                      name: "Mike",
-                                      avatarURL: "https://avatars1.githubusercontent.com/u/1272611?s=460&v=4"))
+            UserListView(
+                .init(
+                    id: UUID(),
+                    name: "Mike",
+                    avatarURL: "https://avatars1.githubusercontent.com/u/1272611?s=460&v=4"
+                )
+            )
         }
         .colorScheme(.light)
         .device(.iPhoneX)

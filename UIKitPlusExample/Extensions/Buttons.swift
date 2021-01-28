@@ -1,8 +1,16 @@
+//
+//  Buttons.swift
+//  UIKitPlusExample
+//
+//  Created by Mihael Isaev on 29.01.2021.
+//  Copyright © 2021 Swift Stream. All rights reserved.
+//
+
 import UIKitPlus
 
 extension UButton {
     static var back: UButton {
-        UButton().image(.iconBack).tint(0x9FA4B6.color / .white).size(25, 18)
+        UButton().image(.iconBack).tint(.black / .white)
     }
     static var gray: UButton {
         UButton()
@@ -22,18 +30,12 @@ extension UButton {
     }
 }
 
-#if canImport(SwiftUI)
+#if canImport(SwiftUI) && DEBUG
 import SwiftUI
 @available(iOS 13.0, *)
 struct Buttons_Preview: PreviewProvider, DeclarativePreviewGroup {
     static var previewGroup: PreviewGroup {
         PreviewGroup {
-            Preview {
-                UButton.back.centerInSuperview()
-            }
-            .title("back")
-            .colorScheme(.light)
-            .layout(.fixed(width: 50, height: 50))
             Preview {
                 UButton.gray.title("Gray Button").edgesToSuperview(h: 8).centerYInSuperview()
             }

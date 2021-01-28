@@ -3,12 +3,16 @@ import UIKitPlus
 class DiffableCollectionViewController: NavigationViewController {
     override var statusBarStyle: StatusBarStyle { .dark }
     
-    lazy var flowLayout = CollectionViewFlowLayout()
+    lazy var flowLayout = UCollectionViewFlowLayout()
         .estimatedItemSize(88)
         .scrollDirection(.vertical)
         .sectionInset(16)
     
     @UState var users: [User] = []
+    
+    deinit {
+        print("DiffableCollectionViewController deinit")
+    }
     
     override func buildUI() {
         title = "Diffable Collection"
@@ -18,10 +22,12 @@ class DiffableCollectionViewController: NavigationViewController {
                 .color(.black)
                 .width(80)
                 .edgesToSuperview(trailing: -16, bottom: -11)
-                .onTapGesture(addMore)
+                .onTapGesture { [weak self] in
+                    self?.addMore()
+                }
         }
         body {
-            Collection(flowLayout) {
+            UCollection(flowLayout) {
                 UForEach($users) {
                     UserCollectionView($0)
                 }
@@ -43,7 +49,11 @@ class DiffableCollectionViewController: NavigationViewController {
     func addMore() {
         let moreQuantity = 10
         let moreUsers = (lastAvatarKey...lastAvatarKey + moreQuantity).map {
-            User(id: UUID(), name: "User #\($0)", avatarURL: "https://avatars1.githubusercontent.com/u/\($0)?s=460&v=4")
+            User(
+                id: UUID(),
+                name: "User #\($0)",
+                avatarURL: "https://avatars1.githubusercontent.com/u/\($0)?s=460&v=4"
+            )
         }
         lastAvatarKey += moreQuantity
         users.append(contentsOf: moreUsers)
