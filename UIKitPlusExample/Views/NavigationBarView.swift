@@ -18,7 +18,8 @@ class NavigationBarView: UView {
             backButton
             titleLabel
         }
-        height(80 !! .iPhoneX(100) !! .iPhoneXMax(100)) /// different value for different devices
+        /// different height for different device
+        height((50 !! .iPhoneX(60) !! .iPhoneXMax(70)) + App.safeInsets.top)
         background(.white / .darkGray)
         corners(32, .bottomLeft, .bottomRight)
         shadow(0xA0ABCE, opacity: 1, x: 0, y: -4, radius: 10)

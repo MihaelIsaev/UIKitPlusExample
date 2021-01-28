@@ -53,6 +53,10 @@ class MainViewController: ViewController {
                 UButton.gray.title("Map View").onTapGesture {
                     self.pushViewController(MapViewController())
                 }
+                UVSpace(10)
+                UButton.gray.title("List with sections").onTapGesture {
+                    self.pushViewController(ListWithSectionsViewController())
+                }
             }
             .background(.clear)
             .top(to: imageView, 44)

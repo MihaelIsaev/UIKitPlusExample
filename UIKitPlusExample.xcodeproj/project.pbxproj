@@ -21,6 +21,7 @@
 		EC0DCD6425C35F70006CCEBF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DCD5F25C35F70006CCEBF /* ChatViewController.swift */; };
 		EC0DCD6925C3604F006CCEBF /* DiffableListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DCD5D25C35F70006CCEBF /* DiffableListViewController.swift */; };
 		EC0DCD6C25C3606C006CCEBF /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DCD6B25C3606C006CCEBF /* NavigationViewController.swift */; };
+		EC0DCD7025C36F97006CCEBF /* ListWithSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0DCD6F25C36F97006CCEBF /* ListWithSectionsViewController.swift */; };
 		EC987DF425C356170010675D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC987DF325C356170010675D /* Foundation.framework */; };
 		EC987DF625C356170010675D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC987DF525C356170010675D /* UIKit.framework */; };
 		EC987DFA25C356170010675D /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC987DF925C356170010675D /* Buttons.swift */; };
@@ -48,6 +49,7 @@
 		EC0DCD5E25C35F70006CCEBF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EC0DCD5F25C35F70006CCEBF /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		EC0DCD6B25C3606C006CCEBF /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		EC0DCD6F25C36F97006CCEBF /* ListWithSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWithSectionsViewController.swift; sourceTree = "<group>"; };
 		EC987DF025C356170010675D /* UIKitPlusExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKitPlusExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC987DF325C356170010675D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EC987DF525C356170010675D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -160,6 +162,7 @@
 				EC0DCD5B25C35F6F006CCEBF /* DiffableCollectionViewController.swift */,
 				EC0DCD5D25C35F70006CCEBF /* DiffableListViewController.swift */,
 				EC0DCD5E25C35F70006CCEBF /* MapViewController.swift */,
+				EC0DCD6F25C36F97006CCEBF /* ListWithSectionsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				EC0DCD6925C3604F006CCEBF /* DiffableListViewController.swift in Sources */,
 				EC0DCD5025C35F33006CCEBF /* NavigationBarView.swift in Sources */,
 				EC0DCD6325C35F70006CCEBF /* MapViewController.swift in Sources */,
+				EC0DCD7025C36F97006CCEBF /* ListWithSectionsViewController.swift in Sources */,
 				EC0DCD5225C35F33006CCEBF /* MessageOpponentView.swift in Sources */,
 				EC0DCD5925C35F49006CCEBF /* User.swift in Sources */,
 				EC0DCD5325C35F33006CCEBF /* MessageMyView.swift in Sources */,
