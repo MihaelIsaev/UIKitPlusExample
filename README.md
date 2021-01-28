@@ -3,10 +3,10 @@
         <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
     </a>
     <a href="https://swift.org">
-        <img src="https://img.shields.io/badge/swift-5.2-brightgreen.svg" alt="Swift 5.2">
+        <img src="https://img.shields.io/badge/swift-5.2-brightgreen.svg" alt="Swift 5.3">
     </a>
     <a href="https://swift.org">
-        <img src="https://img.shields.io/badge/iOS-9+-brightgreen.svg" alt="Swift 5.2">
+        <img src="https://img.shields.io/badge/iOS-9+-brightgreen.svg" alt="Swift 5.3">
     </a>
     <a href="https://discord.gg/q5wCPYv">
         <img src="https://img.shields.io/badge/CLICK_HERE_TO_DISCUSS_THIS_LIB-SWIFT.STREAM-FD6F32.svg" alt="Swift.Stream">
@@ -22,7 +22,7 @@ An example project for [UIKitPlus](https://github.com/MihaelIsaev/UIKitPlus) lib
 
 The lib itself works with **iOS9+** (yeah-yeah cause it is pure UIKit! it is not SwiftUI!)
 
-For successful compilation you need **Swift 5.2+ and Xcode 11.4+** (and macOS Catalina if you want live preview)
+For successful compilation you need **Swift 5.3+ and Xcode 12.3+** (and macOS Catalina if you want live preview)
 
 ### How to use
 
